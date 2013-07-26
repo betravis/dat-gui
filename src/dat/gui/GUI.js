@@ -475,14 +475,15 @@ define([
   GUI.TEXT_CLOSED = 'Close Controls';
   GUI.TEXT_OPEN = 'Open Controls';
 
-  dom.bind(window, 'keydown', function(e) {
+  // Don't hide on 'h' press
+  // dom.bind(window, 'keydown', function(e) {
 
-    if (document.activeElement.type !== 'text' &&
-        (e.which === HIDE_KEY_CODE || e.keyCode == HIDE_KEY_CODE)) {
-      GUI.toggleHide();
-    }
+  //   if (document.activeElement.type !== 'text' &&
+  //       (e.which === HIDE_KEY_CODE || e.keyCode == HIDE_KEY_CODE)) {
+  //     GUI.toggleHide();
+  //   }
 
-  }, false);
+  // }, false);
 
   common.extend(
 
