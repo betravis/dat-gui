@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="../build/dat.gui.js"></script>
+<script type="text/javascript" src="../build/dat.color.js"></script>
+<script>
+window.onload = function() {
+    var obj = {
+        number: 1,
+        string: 'dat.gui',
+        check: true,
+        color: "#ffcc00"
+    };
+    var gui = new dat.GUI();
+    gui.add(obj, 'number', -5, 5);
+    gui.add(obj, 'string');
+    gui.add(obj, 'check');
+    gui.addColor(obj, 'color');
+}
+</script>
+</head>
+</html>
