@@ -71,9 +71,13 @@ $button-height: 20px;
         /* TODO, these are style notes */
       cursor: pointer;
       text-align: center;
-      background-color: #000;
+      background-color: $background-color;
+      border: 1px solid $border-color;
+      border-top: none;
+      box-sizing: border-box;
+      -moz-box-sizing: border-box;
       &:hover {
-        background-color: #111;
+        background-color: $hover-color;
       }
 
     }

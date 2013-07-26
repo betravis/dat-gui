@@ -1,7 +1,9 @@
-$background-color: #1a1a1a;
+$background-color: #ffffff;
+$text-color: #454545;
+$hover-color: #cecece;
 
 $hover-lighten: 5%;
-$border-lighten: 7%;
+$border-darken: 7%;
 $active-lighten: 10%;
 
 $number-color: #2FA1D6;
@@ -9,9 +11,9 @@ $boolean-color: #806787;
 $string-color: #1ed36f;
 $function-color: #e61d5f;
 $save-row-color: #dad5cb;
-$button-color: darken($save-row-color, 10%);
-$border-color: lighten($background-color, $border-lighten);
-$input-color: lighten($background-color, 8.5%);
+$button-color: $background-color;
+$border-color: darken($background-color, $border-darken);
+$input-color: darken($background-color, 8.5%);
 
 @mixin transition($prop, $time, $curve) {
   -webkit-transition: $prop $time $curve;
@@ -52,9 +54,8 @@ $input-color: lighten($background-color, 8.5%);
 .dg {
 
 
-  color: #eee;
+  color: $text-color;
   font: 11px 'Lucida Grande', sans-serif;
-  text-shadow: 0 -1px 0 #111;
 
   /** Auto place */
   &.main {
@@ -80,6 +81,7 @@ $input-color: lighten($background-color, 8.5%);
     &:not(.folder) {
       background: $background-color;
       border-bottom: 1px solid $border-color;
+      border-right: 1px solid $border-color;
     }
 
     &.save-row {
@@ -155,7 +157,7 @@ $input-color: lighten($background-color, 8.5%);
 
     &.function:hover ,
     &.boolean:hover {
-      background: #111;
+      background: $hover-color;
     }
 
   }
@@ -175,7 +177,8 @@ $input-color: lighten($background-color, 8.5%);
       }
       &:focus {
         background: lighten($input-color, $active-lighten);
-        color: #fff;
+        color: $text-color;
+        box-shadow: 0 0 1px $text-color;
       }
 
     }
